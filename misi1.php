@@ -6,6 +6,8 @@ if( !isset($_SESSION["submit"])) {
   exit;
 }
 
+$no=$_GET['no'];
+
 ?>
 
 <!DOCTYPE html>
@@ -31,16 +33,20 @@ if( !isset($_SESSION["submit"])) {
   </tr>
   
   <table width="100%" height="125" border="0" cellpadding="1" cellspacing="1">
-  <td align="center" width="25%"><a ><img src="img/misi/1.png"  width="1000" height="232" border="0"/></a></td>
+  <td align="center" width="25%"><a ><img src="img/misi/<?= $no ?>.png"  width="1000" height="232" border="0"/></a></td>
 
   <table width="100%" height="125" border="0" cellpadding="1" cellspacing="1">
   <td > <div align="center">
-  <a href=" "><img src="img/misi/button-benar.png"  width="200" height="75" border="0"/></a>
-  <a href=" "><img src="img/misi/button-salah.png"  width="200" height="75" border="0"/></a>
+  <a href="?no=<?= $no?>&&answer=true"><img src="img/misi/button-benar.png"  width="200" height="75" border="0"/></a>
+  <a href="?no=<?= $no?>&&answer=false"><img src="img/misi/button-salah.png"  width="200" height="75" border="0"/></a>
   </div></td>
 
   <table width="100%" height="125" border="0" cellpadding="1" cellspacing="1">
-  <td align="center" width="25%"><a ><img src=""  width="900" height="232" border="0"/></a></td>
+  <?php
+    if (isset($_GET["answer"])){
+      echo '<td align="center" width="25%"><a ><img src="img/misi/pembahasan'.$no.'.png"  width="900" height="232" border="0"/></a></td>';
+    }
+  ?>
   
 
 
