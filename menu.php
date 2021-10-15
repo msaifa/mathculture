@@ -40,6 +40,7 @@ if( !isset($_SESSION["submit"])) {
         <td><div align="center"><a href="materi.php"><img src="img/Button-Materi.png" width="200" height="200" border="0" /></a></div></td>
         <td><div align="center"><a href="openkuis.php"><img src="img/Button-Quiz.png" width="200" height="200" border="0" /></a></div></td>
         <td><div align="center"><a href="reward.php"><img src="img/Button-Reward.png" width="200" height="200" border="0" /></a></div></td>
+        <td><div align="center"><a href=" "><img src="img/Button-Reset.png" width="200" height="200" border="0" /></a></div></td>
         <td><div align="center"><a href="logout.php"><img src="img/Button-Keluar.png" width="200" height="200" border="0" /></a></div></td>
       </tr>
 </body>

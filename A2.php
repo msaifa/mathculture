@@ -5,7 +5,7 @@
     exit;
   }
 
-  $soalno = 2 ;
+  $soalno = 2;
   $jawabanKu = "" ;
 
   if (isset($_SESSION['jawabanquizA'])){
@@ -37,10 +37,11 @@
             background-size: 100%
         }
         #wadahButton{
-          position: fixed;
-          left:0;
+          
+          left:10%;
           bottom:0;
           width: 100%;
+          margin-top: 5.5%;
           padding-bottom: 2.5%;
         }
         #btnBack{
@@ -56,7 +57,7 @@
           margin-top: 18.3%;
         }
         #wadahChekbox div{
-          margin-top: 6.3%;
+          margin-top: 6.7%;
         }
     </style>
 </head>
@@ -68,8 +69,8 @@
     <div><a href="A<?= $soalno ?>.php?answer=D"><img src="<?= $jawabanKu == 'D' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="5%" height="5%"/></a></div>
   </div>
   <div id="wadahButton">
-    <a href="A<?= $soalno-1 ?>.php" id="btnBack"><img src="img/ssebelum.png"  width="200" height="50" border="0"/></a>
-    <a href="A<?= $soalno+1 ?>.php" id="btnNext"><img src="img/slanjut.png"  width="200" height="50" border="0"/></a>
+    <a href="A<?= $soalno-1 ?>.php" id="btnBack"><img src="img/ssebelum.png"  width="225" height="50" border="0"/></a>
+    <a href="A<?= $soalno+1 ?>.php" id="btnNext"><img src="img/slanjut.png"  width="225" height="50" border="0"/></a>
   </div>
 </body>
 </html>

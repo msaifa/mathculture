@@ -103,13 +103,16 @@ $kunciJawabanC = [
         }
         #container{
             width: 50%;
-            background: green;
+            background: #4460fd;
+            border-radius: 20px;
             right: 0;
             margin: auto;
             padding: 16px;
         }
         #wadahJawaban{
-            background: red;
+            background: white;
+            border-radius: 20px;
+            border: 2px solid #4460fd;  
             padding: 16px
         }
     </style>
