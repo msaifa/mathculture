@@ -34,6 +34,12 @@ if( !isset($_SESSION["submit"])) {
     <p><a href="A2.php"><img src="img/button_opsi.png" width="30" height="30" border="0"/></a></p>
     </div></td>
   </tr>
+  <table width="100%" height="125" border="0" cellpadding="0" cellspacing="0">
+  <td > <div align="center">
+  <a href="quizA.php "><img src="img/ssebelum.png"  width="200" height="50" border="0"/></a>
+  <a href="A2.php"><img src="img/slanjut.png"  width="200" height="50" border="0"/></a>
+  <td width="6%">&nbsp;</td>
+  </div></td>
 </table>
 </body>
 </html>
