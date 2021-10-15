@@ -1,43 +1,72 @@
 <?php
-session_start();
-if( !isset($_SESSION["submit"])) {
-  header("Location: login.php");
-  exit;
-}
+  session_start();
+  if( !isset($_SESSION["submit"])) {
+    header("Location: login.php");
+    exit;
+  }
+
+  $soalno = 2 ;
+  $jawabanKu = "" ;
+
+  if (isset($_SESSION['jawabanquizB'])){
+    $jawaban = $_SESSION['jawabanquizB'];
+    if (isset($jawaban[$soalno])){
+      $jawabanKu = $jawaban[$soalno];
+    }
+  } else {
+    $jawaban = [] ;
+  }
+
+  if (isset($_GET['answer'])){
+    $jawaban[$soalno] = $_GET['answer'];
+
+    // set jawaban ke session
+    $_SESSION['jawabanquizB'] = $jawaban;
+    $jawabanKu = $_GET['answer'];
+  }  
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>|KUIS B-2|</title>
+    <title>|KUIS A-<?= $soalno ?>|</title>
     <style>
         body{
-            background-image: url("img/B2.png");
+            background-image: url("img/A<?= $soalno ?>.png");
             background-repeat: no-repeat;
             background-size: 100%
         }
+        #wadahButton{
+          position: fixed;
+          left:0;
+          bottom:0;
+          width: 100%;
+          padding-bottom: 2.5%;
+        }
+        #btnBack{
+          float:left;
+          margin-left: 3%;
+        }
+        #btnNext{
+          float: right;
+          margin-right:3.5%;
+        }
+        #wadahChekbox{
+          margin-left: 59.8%;
+          margin-top:20.5%;
+        }
     </style>
 </head>
-</head>
 <body>
-<table width="57%" height="580" border="0" cellpadding="5" cellspacing="1">
-  <tr>
-    <td>&nbsp;</td>
-  </tr>
-  <p></p>
-  <p></p>
-  <td></td>
-  <tr>
-    <td><div align="right">
-    <br><a href="B3.php"><img src="img/button_opsi.png" width="30" height="30" border="0" /></a></br>
-    <p></p>
-    <br><a href="B3.php"><img src="img/button_opsi.png" width="30" height="30" border="0" /></a></br>
-    <p></p>
-    <br><a href="B3.php"><img src="img/button_opsi.png" width="30" height="30" border="0" /></a></br>
-    <p></p>
-    <br><a href="B3.php"><img src="img/button_opsi.png" width="30" height="30" border="0" /></a></br>
-    </div></td>
-  </tr>
-</table>
+  <div id="wadahChekbox">
+    <br><a href="B<?= $soalno ?>.php?answer=A"><img src="<?= $jawabanKu == 'A' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="5.75%" height="5.75%"/></a></br>
+    <br><a href="B<?= $soalno ?>.php?answer=B"><img src="<?= $jawabanKu == 'B' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="5.75%" height="5.75%"/></a></br>
+    <p><a href="B<?= $soalno ?>.php?answer=C"><img src="<?= $jawabanKu == 'C' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="5.75%" height="5.75%"/></a></p>
+    <p><a href="B<?= $soalno ?>.php?answer=D"><img src="<?= $jawabanKu == 'D' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="5.75%" height="5.75%"/></a></p>
+  </div>
+  <div id="wadahButton">
+    <a href="B<?= $soalno-1 ?>.php" id="btnBack"><img src="img/ssebelum.png"  width="200" height="50" border="0"/></a>
+    <a href="B<?= $soalno+1 ?>.php" id="btnNext"><img src="img/slanjut.png"  width="200" height="50" border="0"/></a>
+  </div>
 </body>
 </html>
