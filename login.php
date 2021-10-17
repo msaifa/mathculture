@@ -13,9 +13,6 @@ require('init.php');
     if(mysqli_num_rows($result)===1){
       $row = mysqli_fetch_assoc($result);
 
-      echo '<pre>' ;
-      print_r($row);
-      echo '</pre>'; 
       $_SESSION["submit"] = true;
       $_SESSION['login'] = $row;
       header("Location: halobony.php");
