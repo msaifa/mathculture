@@ -2,29 +2,26 @@
 session_start();
 $conn = mysqli_connect("localhost", "root", "", "mathculture");
 
-if( isset($_POST["submit"])) {
+  if( isset($_POST["submit"])) {
 
-  $username = $_POST["username"];
-  $password = $_POST["password"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $password = hash("sha256", $password);
 
-  $result = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username' and password='$password'");
 
-  if( mysqli_num_rows($result)===1 ){
-    $row = mysqli_fetch_assoc($result);
-    if(password_verify($password, $row["password"])) {
+    if(mysqli_num_rows($result)===1){
+      $row = mysqli_fetch_assoc($result);
+
+      echo '<pre>' ;
+      print_r($row);
+      echo '</pre>'; 
       $_SESSION["submit"] = true;
+      $_SESSION['login'] = $row;
       header("Location: halobony.php");
-      exit;
+    }  else {
+      echo "<script>alert('username atau password salah!')</script>";
     }
-
-  }
-
-  $error = true;
-}
-  if( isset($error)) {
-    echo "<script>
-            alert('username atau password salah!')
-          </script>";
   }
 ?>
 

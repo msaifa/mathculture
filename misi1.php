@@ -45,6 +45,14 @@ $no=$_GET['no'];
   <?php
     if (isset($_GET["answer"])){
       echo '<td align="center" width="25%"><a ><img src="img/misi/pembahasan'.$no.'.png"  width="900" height="232" border="0"/></a></td>';
+
+      // update level dong bro
+      $loginData = $_SESSION["login"] ;
+      $userid = $loginData['userid'] ;
+      $level = $_GET['no'];
+
+      $conn = mysqli_connect("localhost", "root", "", "mathculture");
+      $result = mysqli_query($conn, "UPDATE users SET misi = $level WHERE userid = $userid");
     }
   ?>
   

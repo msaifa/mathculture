@@ -5,6 +5,14 @@ if( !isset($_SESSION["submit"])) {
   exit;
 }
 
+  if (isset($_GET['reset']) && $_GET['reset'] == 1){
+    $loginData = $_SESSION["login"] ;
+    $userid = $loginData['userid'] ;
+
+    $conn = mysqli_connect("localhost", "root", "", "mathculture");
+    $result = mysqli_query($conn, "UPDATE users SET misi = 0 WHERE userid = $userid");
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +48,7 @@ if( !isset($_SESSION["submit"])) {
         <td><div align="center"><a href="materi.php"><img src="img/Button-Materi.png" width="200" height="200" border="0" /></a></div></td>
         <td><div align="center"><a href="openkuis.php"><img src="img/Button-Quiz.png" width="200" height="200" border="0" /></a></div></td>
         <td><div align="center"><a href="reward.php"><img src="img/Button-Reward.png" width="200" height="200" border="0" /></a></div></td>
-        <td><div align="center"><a href=" "><img src="img/Button-Reset.png" width="200" height="200" border="0" /></a></div></td>
+        <td><div align="center"><a href="menu.php?reset=1"><img src="img/Button-Reset.png" width="200" height="200" border="0" /></a></div></td>
         <td><div align="center"><a href="logout.php"><img src="img/Button-Keluar.png" width="200" height="200" border="0" /></a></div></td>
       </tr>
 </body>
