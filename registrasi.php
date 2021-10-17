@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "mathculture");
+require('init.php');
 
 function registrasi($data) {
   global $conn;

@@ -1,6 +1,7 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost", "root", "", "mathculture");
+require('init.php');
+
 if( !isset($_SESSION["submit"])) {
   header("Location: login.php");
   exit;

@@ -1,5 +1,7 @@
 <?php
 session_start();
+require('init.php');
+
 if( !isset($_SESSION["submit"])) {
   header("Location: login.php");
   exit;
@@ -9,7 +11,6 @@ if (isset($_SESSION["login"]) && $_SESSION["login"]){
   $loginData = $_SESSION["login"] ;
   $userid = $loginData['userid'] ;
 
-  $conn = mysqli_connect("localhost", "root", "", "mathculture");
   $result = mysqli_query($conn, "SELECT * FROM users WHERE userid = $userid");
 
   if( mysqli_num_rows($result)===1 ){

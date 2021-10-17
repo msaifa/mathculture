@@ -1,6 +1,7 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost", "root", "", "mathculture");
+require('init.php');
+
 if( !isset($_SESSION["submit"])) {
   header("Location: login.php");
   exit;
@@ -51,7 +52,6 @@ $no=$_GET['no'];
       $userid = $loginData['userid'] ;
       $level = $_GET['no'];
 
-      $conn = mysqli_connect("localhost", "root", "", "mathculture");
       $result = mysqli_query($conn, "UPDATE users SET misi = $level WHERE userid = $userid");
     }
   ?>

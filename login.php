@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost", "root", "", "mathculture");
+require('init.php');
 
   if( isset($_POST["submit"])) {
 
