@@ -23,7 +23,7 @@ if( !isset($_SESSION["submit"])) {
   }
 
   if (isset($_GET['no'])){
-    if (($level+1) == $_GET['no']){
+    if (($level+1) >= $_GET['no']){
       redirect("misi1.php?no=" . $_GET['no']);
     } else {
       echo '<script>alert("Anda harus menyelesaikan misi ke-'.($level+1).' terlebih dahulu!")</script>' ;
