@@ -15,7 +15,7 @@ require('init.php');
 
       $_SESSION["submit"] = true;
       $_SESSION['login'] = $row;
-      header("Location: halobony.php");
+      redirect("halobony.php");
     }  else {
       echo "<script>alert('username atau password salah!')</script>";
     }

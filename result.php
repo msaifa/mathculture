@@ -1,7 +1,8 @@
 <?php
-  session_start();
+  session_start();  
+  require('init.php');
   if( !isset($_SESSION["submit"])) {
-    header("Location: login.php");
+    redirect("login.php");
     exit;
   }
 

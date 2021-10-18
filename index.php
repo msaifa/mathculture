@@ -1,10 +1,11 @@
 <?php 
+  require('init.php');
 
   if( !isset($_SESSION["submit"])) {
-    header("Location: login.php");
+    redirect("login.php");
     exit;
   } else {
-    header("Location: halobony.php");
+    redirect("halobony.php");
     exit;
   }
 

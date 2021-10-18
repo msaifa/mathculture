@@ -1,8 +1,9 @@
 <?php 
+require('init.php');
 
 session_start();
 session_destroy();
 
-header("Location: login.php");
+redirect("login.php");
 
 ?>

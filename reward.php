@@ -3,7 +3,7 @@ session_start();
 require('init.php');
 
 if( !isset($_SESSION["submit"])) {
-  header("Location: login.php");
+  redirect("login.php");
   exit;
 }
 
@@ -22,7 +22,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"]){
 
 if (isset($_GET['no'])){
   if (($level+1) == $_GET['no']){
-    header("Location: misi1.php?no=" . $_GET['no']);
+    redirect("misi1.php?no=" . $_GET['no']);
   } else {
     echo '<script>alert("Anda harus menyelesaikan misi ke-'.($level+1).' terlebih dahulu!")</script>' ;
   }

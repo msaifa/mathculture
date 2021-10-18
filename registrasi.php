@@ -23,7 +23,7 @@ function registrasi($data) {
 
 if( isset($_POST["register"])) {
   if(registrasi($_POST) > 0) {
-    header("Location: login.php");
+    redirect("login.php");
   } else{
     echo mysqli_error($conn);
   }
