@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>|KUIS C|</title>
+    <title>|KUIS A|</title>
     <style>
         body{
             background-image: url("img/background9.jpg");
@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-<table width="100%" height="507" border="0" cellpadding="5" cellspacing="1">
+<table width="100%" height="450" border="0" cellpadding="5" cellspacing="1">
   <tr>
     <td>&nbsp;</td>
   </tr>
@@ -22,12 +22,12 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <td height="241">&nbsp;</td>
+    <td height="200">&nbsp;</td>
   </tr>
   <tr>
-    <td height="151"><table width="97%" border="0" align="center" cellpadding="5" cellspacing="1">
+    <td height="120"><table width="97%" border="0" align="center" cellpadding="5" cellspacing="1">
     <tr>
-        <td><div align="center"><a href="C1.php"><img src="img/mulaikuis.png" width="200" height="150" border="0" /></a></div></td>
+        <td><div  align="center"><a href="C1.php"><img src="img/mulaikuis.png"  width="300" height="125" border="0" /></a></div></td>
     </tr>
 </body>
 </html>

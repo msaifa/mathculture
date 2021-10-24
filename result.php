@@ -104,7 +104,7 @@ $kunciJawabanC = [
         }
         #container{
             width: 50%;
-            background: #4460fd;
+            background: #00b6ff;
             border-radius: 20px;
             right: 0;
             margin: auto;
@@ -113,7 +113,7 @@ $kunciJawabanC = [
         #wadahJawaban{
             background: white;
             border-radius: 20px;
-            border: 2px solid #4460fd;  
+            border: 2px solid white;  
             padding: 16px
         }
     </style>

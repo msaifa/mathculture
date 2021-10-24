@@ -36,7 +36,7 @@
         body{
             background-image: url("img/A<?= $soalno ?>.png");
             background-repeat: no-repeat;
-            background-size: 100%
+            background-size: 100%;
         }
         #wadahButton{
           
@@ -55,20 +55,20 @@
           margin-right:3.5%;
         }
         #wadahChekbox{
-          margin-left: 59.8%;
-          margin-top: 22.3%;
+          margin-left: 60.1%;
+          margin-top: 22%;
         }
         #wadahChekbox div{
-          margin-top: 3.7%;
+          margin-top: 4.8%;
         }
     </style>
 </head>
 <body>
   <div id="wadahChekbox">
-    <div><a href="A<?= $soalno ?>.php?answer=A"><img src="<?= $jawabanKu == 'A' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="5%" height="5%"/></a></div>
-    <div><a href="A<?= $soalno ?>.php?answer=B"><img src="<?= $jawabanKu == 'B' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="5%" height="5%"/></a></div>
-    <div><a href="A<?= $soalno ?>.php?answer=C"><img src="<?= $jawabanKu == 'C' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="5%" height="5%"/></a></div>
-    <div><a href="A<?= $soalno ?>.php?answer=D"><img src="<?= $jawabanKu == 'D' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="5%" height="5%"/></a></div>
+    <div><a href="A<?= $soalno ?>.php?answer=A"><img src="<?= $jawabanKu == 'A' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="4%" height="4%"/></a></div>
+    <div><a href="A<?= $soalno ?>.php?answer=B"><img src="<?= $jawabanKu == 'B' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="4%" height="4%"/></a></div>
+    <div><a href="A<?= $soalno ?>.php?answer=C"><img src="<?= $jawabanKu == 'C' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="4%" height="4%"/></a></div>
+    <div><a href="A<?= $soalno ?>.php?answer=D"><img src="<?= $jawabanKu == 'D' ? 'img/button_opsi2.png' : 'img/button_opsi.png'?>" width="4%" height="4%"/></a></div>
   </div>
   <div id="wadahButton">
     <a href="openkuis.php" id="btnBack"><img src="img/ssebelum.png"  width="225" height="50" border="0"/></a>

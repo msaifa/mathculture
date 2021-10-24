@@ -11,10 +11,10 @@
     </style>
 </head>
 <body>
-<table width="100%" height="601" border="0" cellpadding="5" cellspacing="1">
+<table width="100%" height="500" border="0" cellpadding="5" cellspacing="1">
   <tr>
     <td><a href="menu.php"><img src="img/Button-Back-Menu2.png" width="100" height="100" border="0" /></a></td>
-    <td><img src="img/text.png" width="400" height="265"></td>
+    <td align="center" ><img src="img/text.png" width="400" height="265"></td>
     <td>&nbsp;</td>
   </tr>
   <tr>

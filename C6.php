@@ -42,7 +42,7 @@
           left:10%;
           bottom:0;
           width: 100%;
-          margin-top: 5.5%;
+          margin-top: 6%;
           padding-bottom: 2.5%;
         }
         #btnBack{
@@ -54,11 +54,11 @@
           margin-right:3.5%;
         }
         #wadahChekbox{
-          margin-left: 54.5%;
-          margin-top: 18.4%;
+          margin-left: 54.6%;
+          margin-top: 18.3%;
         }
         #wadahChekbox div{
-          margin-top: 8%;
+          margin-top: 8.5%;
         }
     </style>
 </head>
