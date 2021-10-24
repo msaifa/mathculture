@@ -31,9 +31,11 @@ function init() {
   $('#cardSlots').html( '' );
 
   // Create the pile of shuffled cards
-  var numbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
-  var terms = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ];
-  <!--numbers.sort( function() { return Math.random() - .5 } );-->
+  var numbers = [ 3, 7, 2, 1, 4, 1, 2];
+  var terms = ['&nbsp', '&nbsp', '&nbsp', '&nbsp', '&nbsp', '&nbsp', '&nbsp', '&nbsp', '&nbsp', '10' ];
+  // numbers.sort( function() { return Math.random() - .5 } );
+
+  console.log(numbers)
 
   for ( var i=0; i<7; i++ ) {
     $('<div>' + terms[i] + '</div>').data( 'number', numbers[i] ).attr( 'id', 'card'+numbers[i] ).appendTo( '#cardPile' ).draggable( {
@@ -45,7 +47,7 @@ function init() {
   }
 
   // Create the card slots
-  var words = [ 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten' ];
+  var words = [ '&nbsp', '&nbsp', '&nbsp', '&nbsp', '&nbsp', '&nbsp', '&nbsp', '&nbsp', '&nbsp', '&nbsp' ];
   for ( var i=1; i<=7; i++ ) {
     $('<div>' + words[i-1] + '</div>').data( 'number', i ).appendTo( '#cardSlots' ).droppable( {
       accept: '#cardPile div',
@@ -68,7 +70,7 @@ function handleCardDrop( event, ui ) {
   if ( slotNumber == cardNumber ) {
     ui.draggable.addClass( 'correct' );
     ui.draggable.draggable( 'disable' );
-    $(this).droppable( 'disable' );
+    // $(this).droppable( 'disable' );
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     ui.draggable.draggable( 'option', 'revert', false );
     correctCards++;
@@ -101,8 +103,13 @@ function handleCardDrop( event, ui ) {
   <div id="cardSlots"> </div>
 
   <div id="successMessage">
-    <h2>Congratulations!</h2>
-    <button onclick="init()">Play Again</button>
+  </div>
+
+  <div id="btnBack">
+    <a href="materi1-2.php"><img src="img/Button-Back.png" width="90" height="90" border="0" /></a>
+  </div>
+  <div id="btnNext">
+    <a href="materi1-4.php"><img src="img/Button-Next.png" width="90" height="90" border="0" /></a>
   </div>
 
 </div>
