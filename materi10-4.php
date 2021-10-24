@@ -13,7 +13,7 @@ if( !isset($_SESSION["submit"])) {
     <title>|KONSEP HIMPUNAN|</title>
     <style>
         body{
-            background-image: url("img/materi/Materi10-4(dengan background).png");
+            background-image: url("img/materi/M10-4.png");
             background-repeat: no-repeat;
             background-size: 100%
         }
